@@ -13,16 +13,81 @@
         <div class="startWindow">
             <h3 class="headerMainTop">Интеллектуальная игра</h3>
             <h1 class="headerMain">Викторина</h1>
-            <button class="buttonStartGame">Играть</button>
+            <button id="buttonStartGame" class="buttonStartGame">Играть</button>
         </div>
         <div class="contentMenu">
+            <h3 class="headerTheme">Выбор темы</h3>
             <ul>
-                <li><button class="buttonMenu">1</button></li>
-                <li><button class="buttonMenu">1</button></li>
-                <li><button class="buttonMenu">1</button></li>
-                <li><button class="buttonMenu">1</button></li>
-                <li><button class="buttonMenu">1</button></li>
+                <li><button class="buttonMenu">Программирование</button></li>
+                <li><button class="buttonMenu">Математика</button></li>
+                <li><button class="buttonMenu">Русский язык</button></li>
+                <li><button class="buttonMenu">Биология</button></li>
+                <li><button class="buttonMenu">Информатика</button></li>
             </ul>
+        </div>
+        <div id="questionsPlace" class="questionsPlace">
+            <div id="themeProg" class="themeProg">
+                <div class="lightLevel">
+                    <h3 class="headerLevel">Легкий уровень</h3>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="question">Сколько на данный момент существует языков программирования?</p>
+                        <input type="radio" id="questionProgLightOne" name="first"><label for="questionProgLightOne">Около 500</label>
+                        <input type="radio" id="questionProgLightTwo" name="first"><label for="questionProgLightTwo">Чуть более 1000</label>
+                        <input type="radio" id="questionProgLightThree" name="first"><label for="questionProgLightThree">Более 8000</label>
+                    </div>
+                    <div class="questionProg" style="display: none;">
+                        <p>Перевод программ с языка высокого уровня на язык более низкого уровня обеспечивает программа</p>
+                    </div>
+                    <div class="questionProg" style="display: none;">
+                        <p>Перевод программ с языка высокого уровня на язык более низ</p>
+                    </div>
+                    <div class="questionProg" style="display: none;">
+                        <p>Перевод программ с язвает программа</p>
+                    </div>
+                    <div class="questionProg" style="display: none;">
+                        <p>Перевод программ с язык</p>
+                    </div>
+                    <button class="buttonNext">Дальше</button>
+                </div>
+                <div id="middleLevel">
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                </div>
+                <div id="hardLevel">
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                </div>
+            </div>
+            <div id="themeMath">
+                <div class="lightLevel">
+                    <div class="questionOne"></div>
+                    <div class="questionTwo"></div>
+                    <div class="questionThree"></div>
+                    <div class="questionFour"></div>
+                    <div class="questionFive"></div>
+                </div>
+                <div id="middleLevel">
+                    <div class="questionOne"></div>
+                    <div class="questionTwo"></div>
+                    <div class="questionThree"></div>
+                    <div class="questionFour"></div>
+                    <div class="questionFive"></div>
+                </div>
+                <div id="hardLevel">
+                    <div class="questionOne"></div>
+                    <div class="questionTwo"></div>
+                    <div class="questionThree"></div>
+                    <div class="questionFour"></div>
+                    <div class="questionFive"></div>
+                </div>
+            </div>
         </div>
     </div>        
 <script src="script.js"></script>   
