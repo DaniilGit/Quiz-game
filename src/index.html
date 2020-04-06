@@ -26,66 +26,424 @@
             </ul>
         </div>
         <div id="questionsPlace" class="questionsPlace">
+            <div class="globalPoints" id="globalPoints">
+                <h3 class="result">100</h3>
+                <h3>Баллов</h3>
+            </div>
             <div id="themeProg" class="themeProg">
-                <div class="lightLevel">
+                <button class="buttonThemeReturn">Темы</button> 
+                <div class="liteLevel">
                     <h3 class="headerLevel">Легкий уровень</h3>
+                    <h3 class="headerLevel">Средний уровень</h3>
+                    <h3 class="headerLevel">Сложный уровень</h3>
                     <div class="questionProg">
                         <p class="numberQuestion">Вопрос 1</p>
                         <p class="question">Сколько на данный момент существует языков программирования?</p>
-                        <input type="radio" id="questionProgLightOne" name="first"><label for="questionProgLightOne">Около 500</label>
-                        <input type="radio" id="questionProgLightTwo" name="first"><label for="questionProgLightTwo">Чуть более 1000</label>
-                        <input type="radio" id="questionProgLightThree" name="first"><label for="questionProgLightThree">Более 8000</label>
+                        <input type="radio" id="questionProgLiteOneOne" name="one"><label for="questionProgLiteOneOne">Около 500</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteOneTwo" name="one"><label for="questionProgLiteOneTwo">Чуть более 1000</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteOneThree" name="one"><label for="questionProgLiteOneThree">Более 8000</label>
                     </div>
-                    <div class="questionProg" style="display: none;">
-                        <p>Перевод программ с языка высокого уровня на язык более низкого уровня обеспечивает программа</p>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="question">Как называется алгоритм, в котором действия выполняются друг за другом, не повторяясь?</p>
+                        <input type="radio" id="questionProgLiteTwoOne" name="two"><label for="questionProgLiteTwoOne">Циклическим</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteTwoTwo" name="two"><label for="questionProgLiteTwoTwo">Разветвленным</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteTwoThree" name="two"><label for="questionProgLiteTwoThree">Линейным</label>
                     </div>
-                    <div class="questionProg" style="display: none;">
-                        <p>Перевод программ с языка высокого уровня на язык более низ</p>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="question">Перевод программ с языка высокого уровня на язык более низкого уровня обеспечивает программа?</p>
+                        <input type="radio" id="questionProgLiteThreeOne" name="three"><label for="questionProgLiteThreeOne">Компилятор</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteThreeTwo" name="three"><label for="questionProgLiteThreeTwo">Паскаль</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteThreeThree" name="three"><label for="questionProgLiteThreeThree">Ассемблер</label>
                     </div>
-                    <div class="questionProg" style="display: none;">
-                        <p>Перевод программ с язвает программа</p>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="question">Переменные, объявленные в функции программиста, называются?</p>
+                        <input type="radio" id="questionProgLiteFourOne" name="four"><label for="questionProgLiteFourOne">Глобальными</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteFourTwo" name="four"><label for="questionProgLiteFourTwo">Формальными</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteFourThree" name="four"><label for="questionProgLiteFourThree">Функциональными</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteFourFour" name="four"><label for="questionProgLiteFourFour">Локальными</label>
                     </div>
-                    <div class="questionProg" style="display: none;">
-                        <p>Перевод программ с язык</p>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="question">Что такое ассемблер?</p>
+                        <input type="radio" id="questionProgLiteFiveOne" name="five"><label for="questionProgLiteFiveOne">Низкоуровневый язык программирования</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteFiveTwo" name="five"><label for="questionProgLiteFiveTwo">Утилита трансляции программы в объективный код компьютера</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionProgLiteFiveThree" name="five"><label for="questionProgLiteFiveThree">Высокоуровневый язык программирования</label>
+                    </div>
+                </div>
+                <div id="middleLevel" class="middleLevel">
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="question">Выберите, какие виды конструкторов является в С++?</p>
+                        <input type="checkbox" id="questionProgMiddleOneOne" name="one"><label for="questionProgMiddleOneOne">Конструктор по умолчанию+</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleOneTwo" name="one"><label for="questionProgMiddleOneTwo">Конструктор копирования+</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleOneThree" name="one"><label for="questionProgMiddleOneThree">Конструктор присваивания</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleOneFour" name="one"><label for="questionProgMiddleOneFour">Конструктор перемещения</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleOneFive" name="one"><label for="questionProgMiddleOneFive">Конструктор с параметрами+</label>
+                    </div>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="question">Укажите, когда вызывается деструктор объекта?</p>
+                        <input type="checkbox" id="questionProgMiddleTwoOne" name="two"><label for="questionProgMiddleTwoOne">После вызова конструктора этого объекта</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleTwoTwo" name="two"><label for="questionProgMiddleTwoTwo">При завершении программы+</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleTwoThree" name="two"><label for="questionProgMiddleTwoThree">Когда программа выходит из области действия объекта</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleTwoFour" name="one"><label for="questionProgMiddleTwoFour">После вызова деструктора этого объекта</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleTwoFive" name="one"><label for="questionProgMiddleTwoFive">При исполнении операции delete для динамического объекта+</label>
+                    </div>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="question">Cредство, позволяющее использовать одно имя для обозначения действий, общих для родственных классов...</p>
+                        <input type="text" id="questionProgMiddleThreeOne" name="three" placeholder="Ответ...">
+                    </div>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="question">Тип данных, определяемый пользователем и сочетающий в себе данные и функции их обработки...</p>
+                        <input type="text" id="questionProgMiddleFourOne" name="three" placeholder="Ответ...">
+                    </div>
+                    <div class="questionProg">
+                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="question">Выберите правильные утверждения: </p>
+                        <input type="checkbox" id="questionProgMiddleFiveOne" name="five"><label for="questionProgMiddleFiveOne">У конструктора могут быть параметры +</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleFiveTwo" name="five"><label for="questionProgMiddleFiveTwo">Конструктор наследуется, но должен быть перегружен</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleFiveThree" name="five"><label for="questionProgMiddleFiveThree">Конструктор вызывается автоматически при объявлении объекта +</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleFiveFour" name="five"><label for="questionProgMiddleFiveFour">Объявление каждого класса должно содержать свой конструктор</label>
+                        <div class="clear"></div>
+                        <input type="checkbox" id="questionProgMiddleFiveFive" name="five"><label for="questionProgMiddleFiveFive">Если конструктор не создан, компилятор создаст его автоматически +</label>
+                    </div>
+                </div>
+                <div id="hardLevel" class="hardLevel">
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                    <div class="questionProg"></div>
+                </div>
+                <button class="buttonNext">Дальше</button>
+            </div>
+            <div id="themeMath" class="themeMath">
+                <button class="buttonThemeReturn">Темы</button> 
+                <div class="liteLevel">
+                    <h3 class="headerLevel">Легкий уровень</h3>
+                    <div class="questionMath">
+                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="question">Сравните числа 0,437 и 7/16</p>
+                        <input type="radio" id="questionMathLiteOneOne" name="one"><label for="questionMathLiteOneOne">Больше</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteOneTwo" name="one"><label for="questionMathLiteOneTwo">Меньше</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteOneThree" name="one"><label for="questionMathLiteOneThree">Равны</label>
+                    </div>
+                    <div class="questionMath">
+                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="question">Вычислите: 4,8 x 3,3 : 7,2</p>
+                        <input type="radio" id="questionMathLiteTwoOne" name="two"><label for="questionMathLiteTwoOne">7.5</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteTwoTwo" name="two"><label for="questionMathLiteTwoTwo">3.5</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteTwoThree" name="two"><label for="questionMathLiteTwoThree">2.2</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteTwoFour" name="two"><label for="questionMathLiteTwoFour">2.4</label>
+                    </div>
+                    <div class="questionMath">
+                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="question">Найдите значение дроби: (а-8)/(2а+5), при а = -4</p>
+                        <input type="radio" id="questionMathLiteThreeOne" name="three"><label for="questionMathLiteThreeOne">4</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteThreeTwo" name="three"><label for="questionMathLiteThreeTwo">-40</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteThreeThree" name="three"><label for="questionMathLiteThreeThree">-4</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteThreeFour" name="three"><label for="questionMathLiteThreeFour">40</label>
+                    </div>
+                    <div class="questionMath">
+                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="question">Сократите дробь: 45ху<sup>2</sup>/75у<sup>2</sup></p>
+                        <input type="radio" id="questionMathLiteFourOne" name="four"><label for="questionMathLiteFourOne">3х/5</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteFourTwo" name="four"><label for="questionMathLiteFourTwo">3ху/5 </label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteFourThree" name="four"><label for="questionMathLiteFourThree">15х/25</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteFourFour" name="four"><label for="questionMathLiteFourFour">3у/5у</label>
+                    </div>
+                    <div class="questionMath">
+                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="question">Найдите сумму дробей х+у/3 и x-у/3</p>
+                        <input type="radio" id="questionMathLiteFiveOne" name="five"><label for="questionMathLiteFiveOne">(х+у)/6</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteFiveTwo" name="five"><label for="questionMathLiteFiveTwo">2х/3 </label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteFiveThree" name="five"><label for="questionMathLiteFiveThree">(х+у)/9</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionMathLiteFiveFour" name="five"><label for="questionMathLiteFiveFour">(х+у)/3</label>
                     </div>
                     <button class="buttonNext">Дальше</button>
                 </div>
                 <div id="middleLevel">
-                    <div class="questionProg"></div>
-                    <div class="questionProg"></div>
-                    <div class="questionProg"></div>
-                    <div class="questionProg"></div>
-                    <div class="questionProg"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
                 </div>
                 <div id="hardLevel">
-                    <div class="questionProg"></div>
-                    <div class="questionProg"></div>
-                    <div class="questionProg"></div>
-                    <div class="questionProg"></div>
-                    <div class="questionProg"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
                 </div>
             </div>
-            <div id="themeMath">
-                <div class="lightLevel">
-                    <div class="questionOne"></div>
-                    <div class="questionTwo"></div>
-                    <div class="questionThree"></div>
-                    <div class="questionFour"></div>
-                    <div class="questionFive"></div>
+            <div id="themeRus" class="themeRus">
+                <button class="buttonThemeReturn">Темы</button> 
+                <div class="liteLevel">
+                    <h3 class="headerLevel">Легкий уровень</h3>
+                    <div class="questionRus">
+                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="question">В каком слове ударение на первом слоге?</p>
+                        <input type="radio" id="questionRusLiteOneOne" name="one"><label for="questionRusLiteOneOne">Таможня</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteOneTwo" name="one"><label for="questionRusLiteOneTwo">Шофер</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteOneThree" name="one"><label for="questionRusLiteOneThree">Туфля</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteOneFour" name="one"><label for="questionRusLiteOneFour">Щавель</label>
+                    </div>
+                    <div class="questionRus">
+                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="question">В каком ряду все слова имеют корни с чередующимися гласными?</p>
+                        <input type="radio" id="questionRusLiteTwoOne" name="two"><label for="questionRusLiteTwoOne">б..чонок, п..ртьера, расст..лить</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteTwoTwo" name="two"><label for="questionRusLiteTwoTwo">зач..рованный, фл..минго, зад..ржать</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteTwoThree" name="two"><label for="questionRusLiteTwoThree">доист..рический, см..ртельный, тр..вога</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteTwoFour" name="two"><label for="questionRusLiteTwoFour">скл..нение, зам..реть, бл..стящий
+
+                        </label>
+                    </div>
+                    <div class="questionRus">
+                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="question">В каком ряду во всех словах на месте пропуска пишется буква О?</p>
+                        <input type="radio" id="questionRusLiteThreeOne" name="three"><label for="questionRusLiteThreeOne">соприк..сновение, притв..ряться, одухотв..ренный</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteThreeTwo" name="three"><label for="questionRusLiteThreeTwo">возг..рание, прил..жить, р..стительный</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteThreeThree" name="three"><label for="questionRusLiteThreeThree">неук..снительный, р..сточек, прик..саться</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteThreeFour" name="three"><label for="questionRusLiteThreeFour">скл..нение, предпол..жение, оз..ренный</label>
+                    </div>
+                    <div class="questionRus">
+                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="question">В каком ряду на месте пропуска пишется буква Ь?</p>
+                        <input type="radio" id="questionRusLiteFourOne" name="four"><label for="questionRusLiteFourOne">запреш..ся, береч..ся, вещ..</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteFourTwo" name="four"><label for="questionRusLiteFourTwo">отреж.., исполнить туш.., ветер свеж..</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteFourThree" name="four"><label for="questionRusLiteFourThree">очень тощ.., брееш..ся, пять дач..</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteFourFour" name="four"><label for="questionRusLiteFourFour">навзнич.., компот из груш.., разреж..те</label>
+                    </div>
+                    <div class="questionRus">
+                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="question">В каком ряду во всех словах пишется одна и та же буква?</p>
+                        <input type="radio" id="questionRusLiteFiveOne" name="five"><label for="questionRusLiteFiveOne">пр..стиж , пр..хожая</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteFiveTwo" name="five"><label for="questionRusLiteFiveTwo">бе..донный, ра..цвет</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteFiveThree" name="five"><label for="questionRusLiteFiveThree">с..ежиться, раз..ехаться</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionRusLiteFiveFour" name="five"><label for="questionRusLiteFiveFour">по..скать, об..ск</label>
+                    </div>
+                    <button class="buttonNext">Дальше</button>
                 </div>
                 <div id="middleLevel">
-                    <div class="questionOne"></div>
-                    <div class="questionTwo"></div>
-                    <div class="questionThree"></div>
-                    <div class="questionFour"></div>
-                    <div class="questionFive"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
                 </div>
                 <div id="hardLevel">
-                    <div class="questionOne"></div>
-                    <div class="questionTwo"></div>
-                    <div class="questionThree"></div>
-                    <div class="questionFour"></div>
-                    <div class="questionFive"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                </div>
+            </div>
+            <div id="themeBio" class="themeBio">
+                <button class="buttonThemeReturn">Темы</button> 
+                <div class="liteLevel">
+                    <h3 class="headerLevel">Легкий уровень</h3>
+                    <div class="questionBio">
+                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="question">Какие вещества необходимы для фотосинтеза?</p>
+                        <input type="radio" id="questionBioLiteOneOne" name="one"><label for="questionBioLiteOneOne">Вода, углекислый газ</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteOneTwo" name="one"><label for="questionBioLiteOneTwo">Солнечный свет, минеральные вещества</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteOneThree" name="one"><label for="questionBioLiteOneThree">Вода, солнечный свет, углекислый газ</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteOneFour" name="one"><label for="questionBioLiteOneFour">Другие живые существа</label>
+                    </div>
+                    <div class="questionBio">
+                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="question">Какие организмы являются автотрофами?</p>
+                        <input type="radio" id="questionBioLiteTwoOne" name="two"><label for="questionBioLiteTwoOne">Грибы</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteTwoTwo" name="two"><label for="questionBioLiteTwoTwo">Бактерии</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteTwoThree" name="two"><label for="questionBioLiteTwoThree">Растения</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteTwoFour" name="two"><label for="questionBioLiteTwoFour">Животные</label>
+                    </div>
+                    <div class="questionBio">
+                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="question">Что такое метаболизм?</p>
+                        <input type="radio" id="questionBioLiteThreeOne" name="three"><label for="questionBioLiteThreeOne">Способность к размножению</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteThreeTwo" name="three"><label for="questionBioLiteThreeTwo">Обмен веществ</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteThreeThree" name="three"><label for="questionBioLiteThreeThree">Процесс роста</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteThreeFour" name="three"><label for="questionBioLiteThreeFour">Питание</label>
+                    </div>
+                    <div class="questionBio">
+                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="question">Что является частью метаболизма?</p>
+                        <input type="radio" id="questionBioLiteFourOne" name="four"><label for="questionBioLiteFourOne">Рост</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteFourTwo" name="four"><label for="questionBioLiteFourTwo">Раздражимость</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteFourThree" name="four"><label for="questionBioLiteFourThree">Дыхание</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteFourFour" name="four"><label for="questionBioLiteFourFour">Размножение</label>
+                    </div>
+                    <div class="questionBio">
+                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="question">Что происходит при обмене веществ?</p>
+                        <input type="radio" id="questionBioLiteFiveOne" name="five"><label for="questionBioLiteFiveOne">Простые вещества, поступающие из внешней среды, преобразуются в сложные</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteFiveTwo" name="five"><label for="questionBioLiteFiveTwo">В клетке из сложных веществ образуются простые вещества</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteFiveThree" name="five"><label for="questionBioLiteFiveThree">Сложные вещества распадаются на простые, из которых клетка образует новые вещества</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionBioLiteFiveFour" name="five"><label for="questionBioLiteFiveFour">Сложные вещества используются клеткой в неизменном виде</label>
+                    </div>
+                    <button class="buttonNext">Дальше</button>
+                </div>
+                <div id="middleLevel">
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                </div>
+                <div id="hardLevel">
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                </div>
+            </div>
+            <div id="themeInf" class="themeInf">
+                <button class="buttonThemeReturn">Темы</button> 
+                <div class="liteLevel">
+                    <h3 class="headerLevel">Легкий уровень</h3>
+                    <div class="questionInf">
+                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="question">Информация - это...</p>
+                        <input type="radio" id="questionInfLiteOneOne" name="one"><label for="questionInfLiteOneOne">Наука, изучающая структуру, общие свойства и методы передачи информации, в том числе связанной с применением ЭВ</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteOneTwo" name="one"><label for="questionInfLiteOneTwo">Сообщения, осведомляющие о положении дел, о состоянии чего-н.</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteOneThree" name="one"><label for="questionInfLiteOneThree">Система знаний о закономерностях в развитии природы, общества и мышления, а также отдельная отрасль таких знаний.</label>
+                    </div>
+                    <div class="questionInf">
+                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="question">Отметьте устройство  компьютера, предназначенное для обработки информации</p>
+                        <input type="radio" id="questionInfLiteTwoOne" name="two"><label for="questionInfLiteTwoOne">Клавиатура</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteTwoTwo" name="two"><label for="questionInfLiteTwoTwo">Материнская плата</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteTwoThree" name="two"><label for="questionInfLiteTwoThree">Процессор</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteTwoFour" name="two"><label for="questionInfLiteTwoFour">Оперативная память</label>
+                    </div>
+                    <div class="questionInf">
+                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="question">Информация в компьютере хранится в виде: </p>
+                        <input type="radio" id="questionInfLiteThreeOne" name="three"><label for="questionInfLiteThreeOne">Букв</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteThreeTwo" name="three"><label for="questionInfLiteThreeTwo">Тестов</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteThreeThree" name="three"><label for="questionInfLiteThreeThree">Чисел</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteThreeFour" name="three"><label for="questionInfLiteThreeFour">Нулей и единиц</label>
+                    </div>
+                    <div class="questionInf">
+                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="question">Самая маленькая единица измерения информации – это...</p>
+                        <input type="radio" id="questionInfLiteFourOne" name="four"><label for="questionInfLiteFourOne">Бит</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteFourTwo" name="four"><label for="questionInfLiteFourTwo">Байт</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteFourThree" name="four"><label for="questionInfLiteFourThree">Мегабайт</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteFourFour" name="four"><label for="questionInfLiteFourFour">Килобайт</label>
+                    </div>
+                    <div class="questionInf">
+                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="question">1 байт – это...</p>
+                        <input type="radio" id="questionInfLiteFiveOne" name="five"><label for="questionInfLiteFiveOne">4 бита</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteFiveTwo" name="five"><label for="questionInfLiteFiveTwo">8 бит</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteFiveThree" name="five"><label for="questionInfLiteFiveThree">16 бит</label>
+                        <div class="clear"></div>
+                        <input type="radio" id="questionInfLiteFiveFour" name="five"><label for="questionInfLiteFiveFour">128 бит</label>
+                    </div>
+                    <button class="buttonNext">Дальше</button>
+                </div>
+                <div id="middleLevel">
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                </div>
+                <div id="hardLevel">
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
+                    <div class="questionMath"></div>
                 </div>
             </div>
         </div>

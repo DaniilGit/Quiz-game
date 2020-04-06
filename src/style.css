@@ -26,6 +26,10 @@ body {
   font-size: 18px;
 }
 
+.clear {
+  clear: both;
+}
+
 .content {
   width: 1300px;
   margin: auto;
@@ -93,6 +97,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   font-family: "Russo One", sans-serif;
+  font-size: 20px;
   padding: 5px;
 }
 
@@ -100,8 +105,35 @@ body {
   color: #944900;
   font-family: "Pacifico", cursive;
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
   margin-bottom: 10px;
+}
+
+.content .questionsPlace .buttonThemeReturn {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 50px;
+}
+
+.content .questionsPlace .globalPoints {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  background: #f7a621;
+  color: #ffffff;
+}
+
+.content .questionsPlace .globalPoints .result {
+  color: #944900;
+  font-size: 20px;
 }
 
 .content .questionsPlace label {
@@ -114,7 +146,64 @@ body {
   margin-right: 10px;
 }
 
-.content .questionsPlace label:before {
+.content .questionsPlace input[type=radio], .content .questionsPlace input[type=checkbox] {
+  display: none;
+}
+
+.content .questionsPlace input[type=radio]:checked + label:after, .content .questionsPlace input[type=radio]:hover + label:after {
+  display: block;
+}
+
+.content .questionsPlace input[type=text] {
+  width: 250px;
+  height: 25px;
+  margin-left: 250px;
+  margin-bottom: 20px;
+  border: none;
+  color: #944900;
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  padding-left: 5px;
+}
+
+.content .questionsPlace input[type=text]:focus {
+  outline: none;
+  border: 1px solid #944900;
+}
+
+.content .questionsPlace input[type=checkbox]:checked + label:after, .content .questionsPlace input[type=checkbox]:hover + label:after {
+  content: "\2713";
+  width: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 20px;
+  background: #944900;
+}
+
+.content .questionsPlace .buttonNext {
+  width: 200px;
+  height: 50px;
+  margin-left: 550px;
+  margin-top: 50px;
+  display: none;
+}
+
+.content .questionsPlace .themeProg .liteLevel .questionProg, .content .questionsPlace .themeProg .liteLevel .questionMath, .content .questionsPlace .themeProg .liteLevel .questionRus, .content .questionsPlace .themeProg .liteLevel .questionBio, .content .questionsPlace .themeProg .liteLevel .questionInf, .content .questionsPlace .themeMath .liteLevel .questionProg, .content .questionsPlace .themeMath .liteLevel .questionMath, .content .questionsPlace .themeMath .liteLevel .questionRus, .content .questionsPlace .themeMath .liteLevel .questionBio, .content .questionsPlace .themeMath .liteLevel .questionInf, .content .questionsPlace .themeRus .liteLevel .questionProg, .content .questionsPlace .themeRus .liteLevel .questionMath, .content .questionsPlace .themeRus .liteLevel .questionRus, .content .questionsPlace .themeRus .liteLevel .questionBio, .content .questionsPlace .themeRus .liteLevel .questionInf, .content .questionsPlace .themeBio .liteLevel .questionProg, .content .questionsPlace .themeBio .liteLevel .questionMath, .content .questionsPlace .themeBio .liteLevel .questionRus, .content .questionsPlace .themeBio .liteLevel .questionBio, .content .questionsPlace .themeBio .liteLevel .questionInf, .content .questionsPlace .themeInf .liteLevel .questionProg, .content .questionsPlace .themeInf .liteLevel .questionMath, .content .questionsPlace .themeInf .liteLevel .questionRus, .content .questionsPlace .themeInf .liteLevel .questionBio, .content .questionsPlace .themeInf .liteLevel .questionInf {
+  overflow: hidden;
+  width: 750px;
+  margin: auto;
+  background-color: #f7a621;
+  display: none;
+}
+
+.content .questionsPlace .themeProg .liteLevel label, .content .questionsPlace .themeMath .liteLevel label, .content .questionsPlace .themeRus .liteLevel label, .content .questionsPlace .themeBio .liteLevel label, .content .questionsPlace .themeInf .liteLevel label {
+  margin-right: 30px;
+  left: 50px;
+}
+
+.content .questionsPlace .themeProg .liteLevel label:before, .content .questionsPlace .themeMath .liteLevel label:before, .content .questionsPlace .themeRus .liteLevel label:before, .content .questionsPlace .themeBio .liteLevel label:before, .content .questionsPlace .themeInf .liteLevel label:before {
   content: "";
   position: absolute;
   left: -10px;
@@ -124,7 +213,7 @@ body {
   background-color: #ffffff;
 }
 
-.content .questionsPlace label:after {
+.content .questionsPlace .themeProg .liteLevel label:after, .content .questionsPlace .themeMath .liteLevel label:after, .content .questionsPlace .themeRus .liteLevel label:after, .content .questionsPlace .themeBio .liteLevel label:after, .content .questionsPlace .themeInf .liteLevel label:after {
   content: "";
   position: absolute;
   left: -6px;
@@ -136,27 +225,26 @@ body {
   display: none;
 }
 
-.content .questionsPlace input[type=radio] {
-  display: none;
-}
-
-.content .questionsPlace input[type=radio]:checked + label:after, .content .questionsPlace input[type=radio]:hover + label:after {
-  display: block;
-}
-
-.content .questionsPlace .buttonNext {
-  width: 200px;
-  height: 50px;
-  margin-left: 550px;
-  margin-top: 50px;
-  display: none;
-}
-
-.content .questionsPlace .themeProg .lightLevel .questionProg {
+.content .questionsPlace .themeProg .middleLevel .questionProg, .content .questionsPlace .themeMath .middleLevel .questionProg, .content .questionsPlace .themeRus .middleLevel .questionProg, .content .questionsPlace .themeBio .middleLevel .questionProg, .content .questionsPlace .themeInf .middleLevel .questionProg {
   overflow: hidden;
   width: 750px;
   margin: auto;
   background-color: #f7a621;
   display: none;
+}
+
+.content .questionsPlace .themeProg .middleLevel label, .content .questionsPlace .themeMath .middleLevel label, .content .questionsPlace .themeRus .middleLevel label, .content .questionsPlace .themeBio .middleLevel label, .content .questionsPlace .themeInf .middleLevel label {
+  margin-right: 30px;
+  left: 40px;
+}
+
+.content .questionsPlace .themeProg .middleLevel label:after, .content .questionsPlace .themeMath .middleLevel label:after, .content .questionsPlace .themeRus .middleLevel label:after, .content .questionsPlace .themeBio .middleLevel label:after, .content .questionsPlace .themeInf .middleLevel label:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #944900;
 }
 /*# sourceMappingURL=style.css.map */
