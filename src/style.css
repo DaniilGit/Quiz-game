@@ -109,6 +109,14 @@ body {
   margin-bottom: 10px;
 }
 
+.content .questionsPlace .questionTwo {
+  color: #944900;
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 .content .questionsPlace .buttonThemeReturn {
   position: absolute;
   display: none;
@@ -225,7 +233,7 @@ body {
   display: none;
 }
 
-.content .questionsPlace .themeProg .middleLevel .questionProg, .content .questionsPlace .themeMath .middleLevel .questionProg, .content .questionsPlace .themeRus .middleLevel .questionProg, .content .questionsPlace .themeBio .middleLevel .questionProg, .content .questionsPlace .themeInf .middleLevel .questionProg {
+.content .questionsPlace .themeProg .middleLevel .questionProg, .content .questionsPlace .themeProg .middleLevel .questionMath, .content .questionsPlace .themeProg .middleLevel .questionRus, .content .questionsPlace .themeProg .middleLevel .questionBio, .content .questionsPlace .themeProg .middleLevel .questionInf, .content .questionsPlace .themeMath .middleLevel .questionProg, .content .questionsPlace .themeMath .middleLevel .questionMath, .content .questionsPlace .themeMath .middleLevel .questionRus, .content .questionsPlace .themeMath .middleLevel .questionBio, .content .questionsPlace .themeMath .middleLevel .questionInf, .content .questionsPlace .themeRus .middleLevel .questionProg, .content .questionsPlace .themeRus .middleLevel .questionMath, .content .questionsPlace .themeRus .middleLevel .questionRus, .content .questionsPlace .themeRus .middleLevel .questionBio, .content .questionsPlace .themeRus .middleLevel .questionInf, .content .questionsPlace .themeBio .middleLevel .questionProg, .content .questionsPlace .themeBio .middleLevel .questionMath, .content .questionsPlace .themeBio .middleLevel .questionRus, .content .questionsPlace .themeBio .middleLevel .questionBio, .content .questionsPlace .themeBio .middleLevel .questionInf, .content .questionsPlace .themeInf .middleLevel .questionProg, .content .questionsPlace .themeInf .middleLevel .questionMath, .content .questionsPlace .themeInf .middleLevel .questionRus, .content .questionsPlace .themeInf .middleLevel .questionBio, .content .questionsPlace .themeInf .middleLevel .questionInf {
   overflow: hidden;
   width: 750px;
   margin: auto;

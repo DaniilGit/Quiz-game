@@ -31,10 +31,7 @@ let themeProg = { // Тема Программирование
     questions: [],
     countTheme: 0,
     testAnswer: [3, 3, 1, 4, 2],
-    textAnswer: ["Полиморфизм", "Класс"],
-    // oneCheckbox: [1, 2, 5],
-    // twoCheckbox: [2, 5],
-    // threeCheckbox: [1, 3, 5],
+    textAnswer: ["полиморфизм", "класс"],
     checkboxAnswer: [[1, 2, 5], [2, 5], [1, 3, 5]],
 }
 
@@ -44,6 +41,7 @@ let themeMath = { // Тема Математика
     questions: [],
     countTheme: 1,
     testAnswer: [2, 3, 1, 1, 2],
+    textAnswer: ["45", "0.95", "17", "25950", "21"]
 }
 let themeRus = { // Тема Русский язык
     name: "questionRus",
@@ -51,6 +49,8 @@ let themeRus = { // Тема Русский язык
     questions: [],
     countTheme: 2,
     testAnswer: [3, 4, 1, 1, 3],
+    textAnswer: ["глубокая", "сверлит"],
+    checkboxAnswer: [[3, 4], [1, 2, 4, 5], [1, 2, 4, 5]],
 }
 let themeBio = { // Тема Биология
     name: "questionBio",
@@ -58,6 +58,8 @@ let themeBio = { // Тема Биология
     questions: [],
     countTheme: 3,
     testAnswer: [3, 3, 2, 3, 3],
+    textAnswer: ["1", "12"],
+    checkboxAnswer: [[2, 3, 5], [2, 4, 5], [1, 3, 5]],
 }
 let themeInf = { // Тема Информатика
     name: "questionInf",
@@ -65,6 +67,7 @@ let themeInf = { // Тема Информатика
     questions: [],
     countTheme: 4,
     testAnswer: [1, 3, 4, 1, 2],
+    textAnswer: ["10", "103f", "127", "2", "60"],
 }
 
 let theme = [themeProg, themeMath, themeRus, themeBio, themeInf];
@@ -110,26 +113,31 @@ function liteQuestions(theme) // Проверка тестовых вопрос�
 
 function middleQuestions(theme) // Проверка вопросов 2 уровня
 {
-    let n = 0;
+    let t = 0;
+    let c = 0;
     let answer = theme.questions[count];
     let numberInput = 1;
-    let correctAnswer = theme.checkboxAnswer[checkboxCountQ];
-
+    
     for (let node of answer.querySelectorAll('input')) {
-        if (node.type == 'text' && node.value == theme.textAnswer[textCountQ]) {
-            theme.points += 7;
-            textCountQ++;
+        if (node.type == 'text') {
+            node.value = node.value.toLowerCase();
+            if (node.value == theme.textAnswer[textCountQ])
+                theme.points += 7;
+            t = 1;
         } else if (node.type == 'checkbox') {
-            if (node.checked == true && correctAnswer.includes(numberInput) == true)
+            if (node.checked == true && theme.checkboxAnswer[checkboxCountQ].includes(numberInput) == true)
                 theme.points += 2;
-            else if (node.checked == true && correctAnswer.includes(numberInput) == false)
+            else if (node.checked == true && theme.checkboxAnswer[checkboxCountQ].includes(numberInput) == false)
                 theme.points -= 2;
             numberInput++;
-            n = 1;
+            c = 1;
         }
     }
-    if (n != 0)
+    alert(theme.points);
+    if (c != 0)
         checkboxCountQ++;
+    if (t != 0)
+        textCountQ++;
     count++;    
 }
 
@@ -190,8 +198,6 @@ function returnTheme(theme) // Рестарт
     checkboxCountQ = 0;
     textCountQ = 0;
 }
-
-
 
 
 function main(theme)
