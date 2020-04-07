@@ -4,18 +4,18 @@ const numberThemeLength = document.getElementsByClassName('buttonMenu').length;
 const numberButtonLength = document.getElementsByClassName('buttonNext').length;
 const divGlobalPoints = document.getElementById('globalPoints');
 const headerlevelLenght = document.getElementsByClassName('headerLevel').length;
-let globalCount = 0;
-let themeClick = [];
-let buttonNext = [];
-let buttonThemeReturn = [];
-let headerLevel = [];
-let count = 0;
-let textCountQ = 0;
-let checkboxCountQ = 0;
-let timerId;
+let globalPoints = 0; // Глобальный счетчик баллов 
+let buttonTheme = []; // Кнопки выбора темы
+let buttonNext = []; // Кнопки далее 
+let buttonThemeReturn = []; // Кнопки возврата к меню тем
+let headerLevel = []; // Наименование уровней 
+let count = 0; // Счетчик вопросов
+let textCountQ = 0; // Счетчик текстовых вопросов
+let checkboxCountQ = 0; // Счетчик вопросов с нескольким выбором ответов
+let timerId; // Переменная для setInterval
 
 for (let i = 0; i < numberThemeLength; i++)   // Инициализация всех тем 
-    themeClick[i] = document.getElementsByClassName('buttonMenu')[i];
+    buttonTheme[i] = document.getElementsByClassName('buttonMenu')[i];
 
 for (let i = 0; i < numberButtonLength; i++) {    // Назначение кнопок "ДАЛЕЕ" перехода между вопросами и кнопок возврата
     buttonNext[i] = document.getElementsByClassName('buttonNext')[i];
@@ -85,7 +85,7 @@ function flippingQuestions(theme) // Переход между вопросам�
 }
 
 
-function questionsCheck(theme)
+function questionsCheck(theme) // Проверка вопросов в зависимости от уровня сложности
 {
     if (count < 5)
         liteQuestions(theme);
@@ -141,7 +141,7 @@ function middleQuestions(theme) // Проверка вопросов 2 уров�
     count++;    
 }
 
-function timer(theme, timerId)
+function timer(theme, timerId) // Таймер проверки ответа
 {
     let i = 0;
     let answer = theme.questions[count];
@@ -156,7 +156,7 @@ function timer(theme, timerId)
         buttonNext[theme.countTheme].style.display = 'none';
 }
 
-function initialQuestion(questions, themeQuestion) 
+function initialQuestion(questions, themeQuestion) // Инициализация вопросов 
 {
     for (let i = 0; i < 15; i++)
         questions[i] = document.getElementsByClassName(themeQuestion)[i];
@@ -169,7 +169,7 @@ function start() // Старт игры
     divGlobalPoints.style.display = 'block';
 }
 
-function printHeaderLevel(count)
+function printHeaderLevel(count) // Вывод названия уровня сложности
 {
     if (count < 5)
         headerLevel[0].style.display = 'block';
@@ -183,7 +183,7 @@ function printHeaderLevel(count)
     }
 }
 
-function returnTheme(theme) // Рестарт
+function returnTheme(theme) // Рестарт тем 
 {
     clearInterval(timerId);  
     document.getElementsByClassName('contentMenu')[0].style.display = 'block';
@@ -212,16 +212,7 @@ function main(theme)
 buttonStartGame.addEventListener('click', start);
 
 for (let i = 0; i < 5; i++) {
-    themeClick[i].addEventListener('click', () => main(theme[i]));
+    buttonTheme[i].addEventListener('click', () => main(theme[i]));
     buttonNext[i].addEventListener('click', () => questionsCheck(theme[i])); 
     buttonNext[i].addEventListener('click', () => flippingQuestions(theme[i]));
 }
-
-// buttonNext[0].addEventListener('click', () => liteQuestions(theme[0])); 
-// buttonNext[0].addEventListener('click', () => flippingQuestions(theme[0])); 
-// buttonNext[1].addEventListener('click', () => liteQuestions(theme[1])); 
-// buttonNext[1].addEventListener('click', () => flippingQuestions(theme[1]));
-// buttonNext[2].addEventListener('click', () => liteQuestions(theme[2])); 
-// buttonNext[2].addEventListener('click', () => flippingQuestions(theme[2]));
-// buttonNext[3].addEventListener('click', () => liteQuestions(theme[3])); 
-// buttonNext[3].addEventListener('click', () => flippingQuestions(theme[3]));
