@@ -32,7 +32,13 @@
             </div>
             <div class="resultPoints" id="resultPoints">
                 <h3 class="result">Результат</h3>
+                <p class="points"><span id="points"></span>%</p>
+                <h3 class="result">Баллов</h3>
             </div>
+            <div class="clock" id="divClock">
+                <span id="clock"></span>
+            </div> 
+
             <div id="themeProg" class="themeProg">
                 <button class="buttonThemeReturn">Темы</button> 
                 <div class="liteLevel">
@@ -89,7 +95,7 @@
                 </div>
                 <div id="middleLevel" class="middleLevel">
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 6</p>
                         <p class="question">Выберите, какие виды конструкторов является в С++?</p>
                         <input type="checkbox" id="questionProgMiddleOneOne" name="one"><label for="questionProgMiddleOneOne">Конструктор по умолчанию</label>
                         <div class="clear"></div>
@@ -102,7 +108,7 @@
                         <input type="checkbox" id="questionProgMiddleOneFive" name="one"><label for="questionProgMiddleOneFive">Конструктор с параметрами</label>
                     </div>
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 7</p>
                         <p class="question">Укажите, когда вызывается деструктор объекта?</p>
                         <input type="checkbox" id="questionProgMiddleTwoOne" name="two"><label for="questionProgMiddleTwoOne">После вызова конструктора этого объекта</label>
                         <div class="clear"></div>
@@ -115,17 +121,17 @@
                         <input type="checkbox" id="questionProgMiddleTwoFive" name="one"><label for="questionProgMiddleTwoFive">При исполнении операции delete для динамического объекта</label>
                     </div>
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 8</p>
                         <p class="question">Cредство, позволяющее использовать одно имя для обозначения действий, общих для родственных классов...</p>
                         <input type="text" id="questionProgMiddleThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="numberQuestion">Вопрос 9</p>
                         <p class="question">Тип данных, определяемый пользователем и сочетающий в себе данные и функции их обработки...</p>
                         <input type="text" id="questionProgMiddleFourOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="numberQuestion">Вопрос 10</p>
                         <p class="question">Выберите правильные утверждения: </p>
                         <input type="checkbox" id="questionProgMiddleFiveOne" name="five"><label for="questionProgMiddleFiveOne">У конструктора могут быть параметры</label>
                         <div class="clear"></div>
@@ -140,7 +146,7 @@
                 </div>
                 <div id="hardLevel" class="hardLevel">
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 11</p>
                         <p class="question">Выберите правильные утверждения:</p>
                         <input type="checkbox" id="questionProgHardOneOne" name="one"><label for="questionProgHardOneOne">Если элементы класса объявлены как private, то они доступны только наследникам класса, но не внешним функциям</label>
                         <div class="clear"></div>
@@ -151,22 +157,22 @@
                         <input type="checkbox" id="questionProgHardOneFour" name="one"><label for="questionProgHardOneFour">Если элементы объявлены как public, то они доступны и наследникам класса, и внешним функциям</label>
                     </div>
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 12</p>
                         <p class="question">Метод, имя которого совпадает с именем класса и который вызывается автоматически при создании объекта класса...</p>
                         <input type="text" id="questionProgHardTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 13</p>
                         <p class="question">Размещение в одном компоненте данных и методов, которые с ними работают. Также может означать скрытие внутренней реализации от других компонентов...</p>
                         <input type="text" id="questionProgHardThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="numberQuestion">Вопрос 14</p>
                         <p class="question">Механизм, посредством которого производный класс получает элементы родительского и может дополнять либо изменять их свойства и методы...</p>
                         <input type="text" id="questionProgHardFourOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionProg">
-                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="numberQuestion">Вопрос 15</p>
                         <p class="question">Выберите правильные утверждения:</p>
                         <input type="checkbox" id="questionProgHardFiveOne" name="five"><label for="questionProgHardFiveOne">Деструктор - это метод класса, применяемый для удаления объекта</label>
                         <div class="clear"></div>
@@ -241,58 +247,58 @@
                 </div>
                 <div id="middleLevel" class="middleLevel">
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 6</p>
                         <p class="question">По тарифному плану «Просто как день» со счёта абонента компания сотовой связи каждый день снимает 11 рублей.
                             Если на счету осталось не больше 11 рублей, то на следующий день номер блокируют до пополнения счёта. Сегодня Иван положил на свой счёт 500 рублей.
                             Сколько дней (включая сегодняшний) он сможет пользоваться телефоном, не пополняя счёт?</p>
                         <input type="text" id="questionMathMiddleOneOne" name="one" placeholder="Ответ...">
                     </div>
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 7</p>
                         <p class="question">На экзамен вынесено 60 вопросов, Андрей не выучил 3 из них. Найдите вероятность того, что ему попадется выученный вопрос</p>
                         <input type="text" id="questionMathMiddleTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 8</p>
                         <p class="question">Найдите корень уравнения &#8730(3x+49) = 10</p>
                         <input type="text" id="questionMathMiddleThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="numberQuestion">Вопрос 9</p>
                         <p class="question">Таксист за месяц проехал 11000 км. Цена бензина 35 рублей за литр. Средний расход бензина на 100 км составляет 7 литров. Сколько рублей потратил таксист на бензин за этот месяц</p>
                         <input type="text" id="questionMathMiddleFourOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="numberQuestion">Вопрос 10</p>
                         <p class="question">Найдите корень уравнения log<sup>5</sup>(4x+x) = 2</p>
                         <input type="text" id="questionMathMiddleFiveOne" name="five" placeholder="Ответ...">
                     </div>
                 </div>
                 <div id="hardLevel" class="hardLevel">
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 11</p>
                         <p class="question">Найдите наименьшее значение функции y = 2<sup>x<sup>2</sup>+ 2x + 5</sup>.</p>
-                        <input type="text" id="questionMathHardOneOne" name="one" placeholder="Ответ...16">
+                        <input type="text" id="questionMathHardOneOne" name="one" placeholder="Ответ...">
                     </div>
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 12</p>
                         <p class="question">Килограмм орехов стоит 75 рублей. Маша купила 4 кг 400 г орехов. Сколько рублей сдачи она должна получить с 350 рублей?</p>
-                        <input type="text" id="questionMathHardTwoOne" name="two" placeholder="Ответ...20">
+                        <input type="text" id="questionMathHardTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 13</p>
                         <p class="question">В классе 26 учащихся, среди них два друга — Андрей и Сергей. Учащихся случайным образом разбивают на 2 равные группы. Найдите вероятность того, что Андрей и Сергей окажутся в одной группе.</p>
-                        <input type="text" id="questionMathHardThreeOne" name="three" placeholder="Ответ... 0.48">
+                        <input type="text" id="questionMathHardThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="numberQuestion">Вопрос 14</p>
                         <p class="question">Найдите p(x - 7) + p(13 - x), если p(x) = 2x + 1</p>
-                        <input type="text" id="questionMathHardFourOne" name="three" placeholder="Ответ... 14">
+                        <input type="text" id="questionMathHardFourOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionMath">
-                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="numberQuestion">Вопрос 15</p>
                         <p class="question">Прямая y = 3x + 4 является касательной к графику функции y = 3x<sup>2</sup> - 3x + c. Найдите c.</p>
-                        <input type="text" id="questionMathHardFiveOne" name="five" placeholder="Ответ...7">
+                        <input type="text" id="questionMathHardFiveOne" name="five" placeholder="Ответ...">
                     </div>
                 </div>
                 <button class="buttonNext">Дальше</button>
@@ -361,7 +367,7 @@
                 </div>
                 <div id="middleLevel" class="middleLevel">
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 6</p>
                         <p class="question">Выберите варианты ответов, в которых во всех словах одного ряда пропущена одна и та же буква...</p>
                         <input type="checkbox" id="questionRusMiddleOneOne" name="one"><label for="questionRusMiddleOneOne">пр..жился, пр..старелый, пр..амурский</label>
                         <div class="clear"></div>
@@ -374,13 +380,13 @@
                         <input type="checkbox" id="questionRusMiddleOneFive" name="one"><label for="questionRusMiddleOneFive">пр..забавный, сопр..косновение, пр..школьный</label>
                     </div>
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 7</p>
                         <p class="question">Отредактируйте предложение: исправьте лексическую ошибку, исключив лишнее слово. Выпишите это слово.</p>
                         <p class="questionTwo">Перед путешественниками развернулась глубокая бездна, преодалеть которую было невозможно.</p>
                         <input type="text" id="questionRusMiddleTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 8</p>
                         <p class="question">В одном из приведенных ниже слов допущена ошибка в постановке ударения: НЕВЕРНО выделена буква, обозначающая ударный гласный звук. Выпишите это слово.</p>
                         <p class="questionTwo">
                             вОвремя<br>
@@ -392,7 +398,7 @@
                         <input type="text" id="questionRusMiddleThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="numberQuestion">Вопрос 9</p>
                         <p class="question">Расставьте знаки препинания: укажите цифры, на месте которых в предложении должны стоять запятые:</p>
                         <p class="questionTwo">Величественное животное (1) застывшее в нескольких десятках метров от нас (2) качнуло своими ветвистыми рогами (3) и (4) сорвавшись с места (5) скрылось в чаще.</p>
                         <input type="checkbox" id="questionRusMiddleFourOne" name="five"><label for="questionRusMiddleFourOne">1</label>
@@ -406,7 +412,7 @@
                         <input type="checkbox" id="questionRusMiddleFourFive" name="five"><label for="questionRusMiddleFourFive">5</label>
                     </div>
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="numberQuestion">Вопрос 10</p>
                         <p class="question">Выберите варианты ответов, в которых во всех словах одного ряда пропущена безударная проверяемая гласная корняю:</p>
                         <input type="checkbox" id="questionRusMiddleFiveOne" name="five"><label for="questionRusMiddleFiveOne">исст..ри, прив..заться, разм..щать</label>
                         <div class="clear"></div>
@@ -421,7 +427,7 @@
                 </div>
                 <div id="hardLevel" class="hardLevel">
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 11</p>
                         <p class="question">Укажите варианты ответов, в которых во всех словах одного ряда пропущена безударная непроверяемая гласная корня:</p>
                         <input type="checkbox" id="questionRusHardOneOne" name="one"><label for="questionRusHardOneOne">уб..ру, пр..лестный, подб..родок</label>
                         <div class="clear"></div>
@@ -432,7 +438,7 @@
                         <input type="checkbox" id="questionRusHardOneFour" name="one"><label for="questionRusHardOneFour">предв..рительный, н..стальгия, фл..мастер</label>
                     </div>
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 12</p>
                         <p class="question">В одном из приведённых ниже слов допущена ошибка в постановке ударения: НЕВЕРНО выделена буква, обозначающая ударный гласный звук. Выпишите это слово.</p>
                         <p class="questionTwo">
                             вручАт<br>
@@ -444,19 +450,19 @@
                         <input type="text" id="questionRusHardTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 13</p>
                         <p class="question">Отредактируйте предложение: исправьте лексическую ошибку, заменив неверно употреблённое слово. Запишите подобранное слово, соблюдая нормы современного русского литературного языка.</p>
                         <p class="questionTwo">Когда я был маленький, отец всегда говорил мне, что гордиться можно только тем, к чему ты предпринял усилия, и я запомнил эти слова на всю жизнь.</p>
                         <input type="text" id="questionRusHardThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="numberQuestion">Вопрос 14</p>
                         <p class="question">Отредактируйте предложение: исправьте лексическую ошибку, исключив лишнее слово. Выпишите это слово.</p>
                         <p class="questionTwo">К ужину Марья Сергеевна испекла яблочную шарлотку из яблок и пригласила на чай соседей.</p>
                         <input type="text" id="questionRusHardFourOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionRus">
-                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="numberQuestion">Вопрос 15</p>
                         <p class="question">Укажите варианты ответов, в которых в обоих словах одного ряда пропущена одна и та же буква: </p>
                         <input type="checkbox" id="questionRusHardFiveOne" name="five"><label for="questionRusHardFiveOne">претерп..вающий, замш..вый</label>
                         <div class="clear"></div>
@@ -533,7 +539,7 @@
                 </div>
                 <div id="middleLevel" class="middleLevel">
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 6</p>
                         <p class="question">Выберите положения синтетической теории эволюции. 235</p>
                         <input type="checkbox" id="questionBioMiddleOneOne" name="one"><label for="questionBioMiddleOneOne">Виды реально существуют в природе и формируются длительное время.</label>
                         <div class="clear"></div>
@@ -546,18 +552,18 @@
                         <input type="checkbox" id="questionBioMiddleOneFive" name="one"><label for="questionBioMiddleOneFive">Естественный отбор — направляющий фактор эволюции.</label>
                     </div>
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 7</p>
                         <p class="question">Сколько аллелей одного гена содержит яйцеклетка цветкового растения? В ответе запишите только соответствующее число.</p>
                         <input type="text" id="questionBioMiddleTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 8</p>
                         <p class="question">Сколько молекул ДНК содержится в трёх бивалентах, образованных тремя парами гомологичных хромосом? В ответе запишите только число.</p>
                         <input type="text" id="questionBioMiddleThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 4</p>
-                        <p class="question">Процесс оплодотворения у цветковых растений характеризуется... 245</p>
+                        <p class="numberQuestion">Вопрос 9</p>
+                        <p class="question">Процесс оплодотворения у цветковых растений характеризуется...</p>
                         <input type="checkbox" id="questionBioMiddleFourOne" name="five"><label for="questionBioMiddleFourOne">Образованием цветка</label>
                         <div class="clear"></div>
                         <input type="checkbox" id="questionBioMiddleFourTwo" name="five"><label for="questionBioMiddleFourTwo">Слиянием спермия с центральной клеткой</label>
@@ -569,8 +575,8 @@
                         <input type="checkbox" id="questionBioMiddleFourFive" name="five"><label for="questionBioMiddleFourFive">Образованием зиготы в зародышевом мешке</label>
                     </div>
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 5</p>
-                        <p class="question">Какие из приведённых ниже животных относятся к первичноротым?135</p>
+                        <p class="numberQuestion">Вопрос 10</p>
+                        <p class="question">Какие из приведённых ниже животных относятся к первичноротым?</p>
                         <input type="checkbox" id="questionBioMiddleFiveOne" name="five"><label for="questionBioMiddleFiveOne">Дождевой червь</label>
                         <div class="clear"></div>
                         <input type="checkbox" id="questionBioMiddleFiveTwo" name="five"><label for="questionBioMiddleFiveTwo">Минога</label>
@@ -584,8 +590,8 @@
                 </div>
                 <div id="hardLevel" class="hardLevel">
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 1</p>
-                        <p class="question">Перечисленные понятия, кроме двух, используются для описания лизосом. Определите 2 понятия, выпадающих из общего списка. 13</p>
+                        <p class="numberQuestion">Вопрос 11</p>
+                        <p class="question">Перечисленные понятия, кроме двух, используются для описания лизосом. Определите 2 понятия, выпадающих из общего списка.</p>
                         <input type="checkbox" id="questionBioHardOneOne" name="one"><label for="questionBioHardOneOne">Окислительное фосфорилирование</label>
                         <div class="clear"></div>
                         <input type="checkbox" id="questionBioHardOneTwo" name="one"><label for="questionBioHardOneTwo">Расщепление веществ</label>
@@ -595,19 +601,19 @@
                         <input type="checkbox" id="questionBioHardOneFour" name="one"><label for="questionBioHardOneFour">Одномембранный органоид</label>
                     </div>
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 12</p>
                         <p class="question">Какой процент составляет нуклеотиды с аденином в молекуле ДНК, если нуклеотиды с гуанином и цитозином вместе составляют 18%?</p>
-                        <input type="text" id="questionBioHardTwoOne" name="two" placeholder="Ответ...41">
+                        <input type="text" id="questionBioHardTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 13</p>
                         <p class="question">Гомозиготные доминантные серые овцы при переходе на грубые корма гибнут, а гетерозиготные выживают. Определите, какой % серых жизнеспособных особей родится при скрещивании серой овцы и черного барана.</p>
-                        <input type="text" id="questionBioHardThreeOne" name="three" placeholder="Ответ...50">
+                        <input type="text" id="questionBioHardThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 4</p>
-                        <p class="question">Животные, имеющие первичную полость тела, — это 234</p>
-                        <input type="checkbox" id="questionBioHardFourTwo" name="three"><label for="questionBioHardFourTwo">Бычий цепень</label>
+                        <p class="numberQuestion">Вопрос 14</p>
+                        <p class="question">Животные, имеющие первичную полость тела, — это </p>
+                        <input type="checkbox" id="questionBioHardFourOne" name="three"><label for="questionBioHardFourOne">Бычий цепень</label>
                         <div class="clear"></div>
                         <input type="checkbox" id="questionBioHardFourTwo" name="three"><label for="questionBioHardFourTwo">Аскарида</label>
                         <div class="clear"></div>
@@ -619,8 +625,8 @@
                         <div class="clear"></div>
                     </div>
                     <div class="questionBio">
-                        <p class="numberQuestion">Вопрос 5</p>
-                        <p class="question">Какие из перечисленных веществ можно обнаружить в хлоропластах?123</p>
+                        <p class="numberQuestion">Вопрос 15</p>
+                        <p class="question">Какие из перечисленных веществ можно обнаружить в хлоропластах?</p>
                         <input type="checkbox" id="questionBioHardFiveOne" name="five"><label for="questionBioHardFiveOne">Глюкоза</label>
                         <div class="clear"></div>
                         <input type="checkbox" id="questionBioHardFiveTwo" name="five"><label for="questionBioHardFiveTwo">Фосфолипиды</label>
@@ -694,57 +700,57 @@
                 </div>
                 <div id="middleLevel" class="middleLevel">
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 6</p>
                         <p class="question">Укажите целое число от 8 до 11, двоичная запись которого содержит ровно две единицы. Если таких чисел несколько, укажите наибольшее из них.</p>
                         <input type="text" id="questionInfMiddleOneOne" name="one" placeholder="Ответ...">
                     </div>
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 7</p>
                         <p class="question">Укажите наименьшее четырёхзначное шестнадцатеричное число, двоичная запись которого содержит ровно 6 нулей. В ответе запишите только само шестнадцатеричное число, основание системы счисления указывать не нужно.</p>
                         <input type="text" id="questionInfMiddleTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 8</p>
                         <p class="question">Каждое из логических выражений F и G содержит 7 переменных. В таблицах истинности выражений F и G есть ровно 7 одинаковых строк, причём ровно в 6 из них в столбце значений стоит 0.
                             Сколько строк таблицы истинности для выражения F ∧ G содержит 0 в столбце значений?</p>
                         <input type="text" id="questionInfMiddleThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="numberQuestion">Вопрос 9</p>
                         <p class="question">В корзине лежат 8 черных шаров и 24 белых. Сколько бит информации несет сообщение о том, что достали черный шар?</p>
                         <input type="text" id="questionInfMiddleFourOne" name="five" placeholder="Ответ...">
                     </div>
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="numberQuestion">Вопрос 10</p>
                         <p class="question">Автоматическое устройство осуществило перекодировку информационного сообщения на русском языке, первоначально записанного в 16-битном коде Unicode, в 8-битную кодировку КОИ-8. При этом информационное сообщение уменьшилось на 480 бит. Какова длина сообщения в символах?</p>
                         <input type="text" id="questionInfMiddleFiveOne" name="five" placeholder="Ответ...">
                     </div>
                 </div>
                 <div id="hardLevel" class="hardLevel">
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 1</p>
+                        <p class="numberQuestion">Вопрос 11</p>
                         <p class="question">Чему равна сумма чисел 30<sub>5</sub> и 41<sub>8</sub>? Результат запишите в двоичной системе счисления.</p>
-                        <input type="text" id="questionInfHardOneOne" name="one" placeholder="Ответ...110000">
+                        <input type="text" id="questionInfHardOneOne" name="one" placeholder="Ответ...">
                     </div>
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 2</p>
+                        <p class="numberQuestion">Вопрос 12</p>
                         <p class="question">Шахматная доска состоит из 8 столбцов и 8 строк. Какое минимальное количество бит потребуется для кодирования координат одной шахматной клетки?</p>
-                        <input type="text" id="questionInfHardTwoOne" name="two" placeholder="Ответ...6">
+                        <input type="text" id="questionInfHardTwoOne" name="two" placeholder="Ответ...">
                     </div>
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 3</p>
+                        <p class="numberQuestion">Вопрос 13</p>
                         <p class="question">Выбор режима работы в некотором устройстве осуществляется установкой ручек двух тумблеров, каждая из которых может находиться в одном из пяти положений. При этом крайнее нижнее одновременное положение обеих ручек соответствует отключению устройства. Сколько различных режимов работы может иметь устройство? Выключенное состояние режимом работы не считать.</p>
-                        <input type="text" id="questionInfHardThreeOne" name="three" placeholder="Ответ... 24">
+                        <input type="text" id="questionInfHardThreeOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 4</p>
+                        <p class="numberQuestion">Вопрос 14</p>
                         <p class="question">Значение арифметического выражения: 9<sup>8</sup> + 3<sup>5</sup> – 9 – записали в системе счисления с основанием 3. Сколько цифр «2» содержится в этой записи?</p>
-                        <input type="text" id="questionInfHardFourOne" name="three" placeholder="Ответ... 3">
+                        <input type="text" id="questionInfHardFourOne" name="three" placeholder="Ответ...">
                     </div>
                     <div class="questionInf">
-                        <p class="numberQuestion">Вопрос 5</p>
+                        <p class="numberQuestion">Вопрос 15</p>
                         <p class="question">Дано А = A7<sub>16</sub>, B = 251<sub>8</sub>. Найдите сумму A + B. Ответ укажите в двоичной системе.</p>
-                        <input type="text" id="questionInfHardFiveOne" name="five" placeholder="Ответ...7">
+                        <input type="text" id="questionInfHardFiveOne" name="five" placeholder="Ответ...">
                     </div>
                 </div>
                 <button class="buttonNext">Дальше</button>
