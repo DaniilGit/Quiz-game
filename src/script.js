@@ -15,9 +15,9 @@ let count = 0; // Счетчик вопросов
 let countCorrectAnswer = 0;
 let textCountQ = 0; // Счетчик текстовых вопросов
 let checkboxCountQ = 0; // Счетчик вопросов с нескольким выбором ответов
-let timerIdMain;
+let timerIdMain; // Перемення для setInterval timer'a
 let timerId; // Переменная для setInterval
-let trueAnswer = [];
+let trueAnswer = []; // Правильные ответы
 
 for (let i = 0; i < numberThemeLength; i++)   // Инициализация всех тем 
     buttonTheme[i] = document.getElementsByClassName('buttonMenu')[i];
@@ -33,8 +33,9 @@ for (let i = 0; i < headerlevelLenght; i++)
 let themeProg = { // Тема Программирование
     name: "questionProg",
     points: 0,
-    maxPoints: 83 / 100,
+    pointsCoef: 83 / 100,
     questions: [],
+    percent: 0,
     countTheme: 0,
     testAnswer: [3, 3, 1, 4, 2],
     textAnswer: ["полиморфизм", "класс", "конструктор", "инкапсуляция", "наследование"],
@@ -44,17 +45,20 @@ let themeProg = { // Тема Программирование
 let themeMath = { // Тема Математика
     name: "questionMath",
     points: 0,
-    maxPoints: 100 / 100,
+    pointsCoef: 100 / 100,
     questions: [],
+    percent: 0,
     countTheme: 1,
     testAnswer: [2, 3, 1, 1, 2],
-    textAnswer: ["45", "0.95", "17", "25950", "21", "16", "20", "0.48", "14", "7"]
+    textAnswer: ["45", "0.95", "17", "25950", "21", "16", "20", "0.48", "14", "7"],
+    checkboxAnswer: []
 }
 let themeRus = { // Тема Русский язык
     name: "questionRus",
     points: 0,
-    maxPoints: 87 / 100,
+    pointsCoef: 87 / 100,
     questions: [],
+    percent: 0,
     countTheme: 2,
     testAnswer: [3, 4, 1, 1, 3],
     textAnswer: ["глубокая", "сверлит", "цепочка", "приложил", "яблочную"],
@@ -63,8 +67,9 @@ let themeRus = { // Тема Русский язык
 let themeBio = { // Тема Биология
     name: "questionBio",
     points: 0,
-    maxPoints: 83 / 100,
+    pointsCoef: 83 / 100,
     questions: [],
+    percent: 0,
     countTheme: 3,
     testAnswer: [3, 3, 2, 3, 3],
     textAnswer: ["1", "12", "41", "50"],
@@ -73,11 +78,13 @@ let themeBio = { // Тема Биология
 let themeInf = { // Тема Информатика
     name: "questionInf",
     points: 0,
-    maxPoints: 100 / 100,
+    pointsCoef: 100 / 100,
     questions: [],
+    percent: 0,
     countTheme: 4,
     testAnswer: [1, 3, 4, 1, 2],
     textAnswer: ["10", "103f", "127", "2", "60", "110000", "6", "24", "3", "7"],
+    checkboxAnswer: []
 }
 
 let theme = [themeProg, themeMath, themeRus, themeBio, themeInf];
@@ -86,12 +93,11 @@ function questionsCheck(theme) // Проверка вопросов в зави�
 {
     if (count < 5)
         liteQuestions(theme);
-    else if (count > 4 && count < 10) {
+    else if (count > 4 && count < 10) 
         middleHardQuestions(theme, 'middle');
-    }
-    else if (count < 15) {
+    else if (count < 15) 
         middleHardQuestions(theme, 'hard');
-    } 
+     
 }
 
 function liteQuestions(theme) // Проверка тестовых вопросов 1 уровня
@@ -168,9 +174,11 @@ function middleHardQuestions(theme, level) // Проверка вопросов 
         checkboxCountQ++;
     if (t != 0)
         textCountQ++;
-    if (n == countCheckBox.length) {
-        trueAnswer[countCorrectAnswer] = answer;
-        countCorrectAnswer++;
+    if (countCheckBox != undefined) {
+        if (n == countCheckBox.length) {
+            trueAnswer[countCorrectAnswer] = answer;
+            countCorrectAnswer++;
+        }
     }
 
     count++;
@@ -206,14 +214,17 @@ function result(theme) // Вывод результата
     headerLevel[2].style.display = 'none';
     divResultPoints.style.display = 'block';
     let pointsBlock = document.getElementById('points');
-    let points = (theme.points / theme.maxPoints).toFixed(1);
-    if (points < 0)
-        points = 0;
+    theme.percent = (theme.points / theme.pointsCoef).toFixed(1);
+    if (theme.percent < 0)
+        theme.percent = 0;
+
+    globalPoints += theme.points;
+    divGlobalPoints.querySelector('span').innerHTML = globalPoints;
     
-    for (let node of trueAnswer) {
+    for (let node of trueAnswer) 
         node.style.display = 'block';
-    }
-    pointsBlock.innerHTML = points;
+
+    pointsBlock.innerHTML = theme.percent;
 }
 function updateCheck(theme, timerId) // Таймер проверки ответа
 {
@@ -230,9 +241,9 @@ function updateCheck(theme, timerId) // Таймер проверки ответ
         buttonNext[theme.countTheme].style.display = 'none';
 }
 
-function timer(theme)
+function timer(theme) // Таймер для вопросов 3 уровня 
 {
-    function checkInput(theme)
+    function checkInput(theme) // Проверка вопроса текстовый/checkbox
     {
         let deadline;
         let input = theme.questions[count];
@@ -245,7 +256,7 @@ function timer(theme)
         return deadline;
     }
 
-    function getTimeRemaining(endtime) {
+    function getTimeRemaining(endtime) { // Инициализация таймера
         let time = Date.parse(endtime) - Date.parse(new Date());
         let seconds = Math.floor((time / 1000) % 60);
         let minutes = Math.floor((time / 1000 / 60) % 60);
@@ -256,7 +267,7 @@ function timer(theme)
         }
     }
     
-    function updateCheck(number)
+    function updateCheck(number) // Вывод таймера
     {
         var t = getTimeRemaining(endtime);
         if(number == 1)
@@ -308,9 +319,11 @@ function returnTheme(theme) // Рестарт тем
     divResultPoints.style.display = 'none';
     divClock.style.display = 'none';
 
-    for (let i = 0; i < 15; i ++) {
+    for (let i = 0; i < 15; i ++)
         theme.questions[i].style.display = 'none';
-    }
+
+    if (theme.percent > 0)
+        buttonTheme[theme.countTheme].querySelector('span').innerHTML = ' (' + theme.percent + '%)';
 
     for (let i = 0; i < 15; i++) {
         answer = theme.questions[i];  
@@ -326,6 +339,8 @@ function returnTheme(theme) // Рестарт тем
     count = 0; 
     checkboxCountQ = 0;
     textCountQ = 0;
+    countCorrectAnswer = 0;
+    trueAnswer = [];
 }
 
 function start() // Старт игры

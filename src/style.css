@@ -80,6 +80,7 @@ body {
 .content .contentMenu .buttonMenu {
   width: 100%;
   height: 50px;
+  font-size: 20px;
   margin-top: 5px;
 }
 
@@ -126,6 +127,7 @@ body {
   top: 0;
   width: 200px;
   height: 50px;
+  font-size: 20px;
 }
 
 .content .questionsPlace .globalPoints {
@@ -139,6 +141,7 @@ body {
   font-size: 16px;
   background: #f7a621;
   color: #ffffff;
+  font-family: "Russo One", sans-serif;
 }
 
 .content .questionsPlace .globalPoints .result {
@@ -160,6 +163,16 @@ body {
   font-size: 40px;
   font-family: "Russo One", sans-serif;
   margin-bottom: 10px;
+}
+
+.content .questionsPlace .resultPoints .correctResult {
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: "Russo One", sans-serif;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .content .questionsPlace .resultPoints .points {
@@ -244,6 +257,7 @@ body {
   overflow: hidden;
   width: 750px;
   margin: auto;
+  margin-bottom: 10px;
   background-color: #f7a621;
   display: none;
 }
@@ -279,6 +293,7 @@ body {
   overflow: hidden;
   width: 750px;
   margin: auto;
+  margin-bottom: 10px;
   background-color: #f7a621;
   display: none;
 }
@@ -302,6 +317,7 @@ body {
   overflow: hidden;
   width: 750px;
   margin: auto;
+  margin-bottom: 10px;
   background-color: #f7a621;
   display: none;
 }
